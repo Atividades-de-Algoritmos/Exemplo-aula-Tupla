@@ -33,6 +33,36 @@ for i in range(len(t1)):
 for i in range(len(t1)):
   print(f"{i} = {i in t1}") # imprime True para cada indice contido na tupla
 
-# verifica se o valor 'a' esta contido na tupla
+
+#############################################################################
+print("--------------------------------------------------------------------")
+#############################################################################
+# Python enumerate()
+# O enumerate()método adiciona um contador a um iterável e o retorna (o objeto enumerate).
+# O enumerate() é um objeto que representa um contador.
+# exemplo:
+# linguagens = ['Python', 'Java', 'JavaScript']
+#
+# enumerate_prime = enumerate(linguagens)
+#
+# # converte o objeto enumerate_prime em uma lista
+# print(list(enumerate_prime))
+#
+# # saida: [(0, 'Python'), (1, 'Java'), (2, 'JavaScript')]
+
+
+# Sintaxe de enumerar():
+# enumerate(iterável, start=0)
+# enumerate() Parâmetros:
+# O método recebe dois parâmetros:
+# # iterável - uma sequência, um iterador ou objetos que suportam iteração
+# start (opcional) - enumerate()inicia a contagem a partir deste número. Se start for omitido,
+# 0 é tomado como start.
+
+t2 = enumerate(t1) # cria um enumerate para a tupla t1
+print(t2) # imprime o enumerate da tupla t1 (indice, elemento)
+print(list(t2)) # converte o enumerate em lista (indice, elemento)
+
+# loop para imprimir o enumerate da tupla t1 (indice, elemento)
 for i, valor in enumerate(t1): # enumerate retorna um iterador de pares (indice, valor) da tupla
-   print(f"indice[{i}] -> {valor} = {i in valor}")
+   print(f"indice[{i}] -> {valor}") # imprime o indice e o valor do elemento da tupla
