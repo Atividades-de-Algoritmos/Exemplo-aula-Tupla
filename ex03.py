@@ -4,37 +4,38 @@
 # Emanuel Franklyn
 # Carlos Eduardo
 #
-# data: 28/06/2022
+# data: 14/07/2022
 #
 # 3 – inicie a tupla abaixo, e contar os itens, use o # método count().
-# ('a','b','b','a','c','c','c','d','d',’e’)
-# Obs: explicar a Counter() da collection.
+# ('a', 'b', 'b', 'a', 'c', 'c', 'c', 'd', 'd', 'e')
 
-# criar a tupla com valores ('a','b','b','a','c','c','c','d','d','e')
-t1 = ('a','b','b','a','c','c','c','d','d','e')
-print(t1)
+# -- Entrada de dados --
 
-# cast tupla -> set
-conjunto = set(t1) # converte a tupla em um conjunto
-print(conjunto) # imprime o conjunto
-print() # imprime uma linha em branco
+t1 = ('a','b','b','a','c','c','c','d','d','e') # Criando a tupla pré-definidos
+print('Tupla: ', t1) # Imprimindo a tupla no terminal
 
-for i in set(t1): # percorre o conjunto e imprime os elementos da tupla (sem repetição)
-  #set(lista1) - elementos únicos da lista1
-  contador = t1.count(i) # conta o número de vezes que o elemento aparece na tupla (sem repetição)
-  print(f"{i} : {contador}") # imprime o elemento e o número de vezes que ele aparece na tupla (sem repetição)
+# -- Processamento e saída de dados --
 
-# explicando o método counter() de Colections
-# Contar vários itens:
-# Se você deseja contar vários itens em uma tupla, pode chamar  count() um loop.
+conjunto = set(t1) # Convertendo a tupla em um conjunto
+print('Conjunto: ', conjunto) # Imprimindo o conjunto
 
-# Essa abordagem, entretanto, requer uma passagem separada pela tupla para cada chamada do count();
-# o que pode ser catastrófico para o desempenho.
-# Em  vez disso, use a classe Couter() da biblioteca collections.
-# ex
-from collections import Counter
-print(Counter(t1)) # imprime o contador da tupla (sem repetição)
-# Imprimir Counter({'c': 3, 'a': 2, 'b': 2, 'd': 2, 'e': 1})
+print() # Print vazio deixa uma linha no terminal, como um enter do teclado
 
-print(Counter(t1).items())  # Imprimir um dicionário de items ({'c': 3, 'a': 2, 'b': 2, 'd': 2, 'e': 1})
-print(tuple(Counter(t1).items())) # converto o dic em tupla (('c', 3), ('a', 2), ('b', 2), ('d', 2), ('e', 1))
+for i in conjunto: # Percorrendo o conjunto e imprimindo os elementos
+  contador = t1.count(i) # Contando o número de vezes que o elemento aparece
+  print(f"{i} : {contador}") # Imprimindo o elemento e o número de vezes que aparece
+
+# -- [ Método counter() da Colections ] --
+# - Função: contar vários itens
+# - Se você deseja contar vários itens em uma tupla, pode chamar count() em um loop.
+# - Essa abordagem, entretanto, requer uma passagem separada pela tupla para cada chamada do count();
+# - o que pode ser catastrófico para o desempenho.
+# - Em  vez disso, use a função Counter() da biblioteca collections.
+
+# Exemplo;
+"""from collections import Counter # Importando a função Counter da biblioteca collections
+
+print(f'\nDicionário (Elemento/Repetições): {dict((Counter(t1)))}') # Imprime dicionário com os valores contados
+print(f'Tupla (Elemento/Repetições): {tuple(Counter(t1).items())}') # Imprimindo o dic.items em tupla com tuple()"""
+
+print('\nfim do programa') # Informa ao usuário que o programa terminou
