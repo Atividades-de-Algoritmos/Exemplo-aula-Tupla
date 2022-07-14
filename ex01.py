@@ -4,25 +4,22 @@
 # Emanuel Franklyn
 # Carlos Eduardo
 #
-# data: 28/06/2022
+# data: 14/07/2022
 #
-# 1 – gere tupla dinamicamente de tamanho 5, de
+# 1 – Gere tupla dinamicamente de tamanho 5, de
 # tamanho aleatório entre 1 e 20
-#
-# importa a biblioteca random para gerar os valores da tupla
-from random import randint
 
-# gera a tupla de tamanho 5 com valores aleatório
-t1 = (randint(1, 20), randint(1, 20), randint(1, 20), randint(1, 20), randint(1, 20))
-print(t1)
+from random import randint # Importando a função randint da biblioteca random
 
-# ou
-# gera a tupla de tamanho 5 com valores aleatório
-t2 = tuple(randint(1, 20) for i in range(5))
-print(t2)
+# -- Primeira forma --
 
-# ou
-# gera a tupla de tamanho aleatorio, com valores sempre entre 1 e 20
-t3 = tuple(range(randint(1, 20)))
-print(t3)
+t1 = (randint(1, 20), randint(1, 20), randint(1, 20), randint(1, 20), randint(1, 20)) # 5 números randômicos
 
+print(f'Tupla: {t1}') # Imprimindo a tupla no terminal
+print(f'\nfim do programa') # Informando ao usuário que o programa terminou
+
+# -- Outra forma --
+
+# t1 = tuple(randint(1, 20) for i in range(5)) # 5 números randômicos usando for
+# print(f'Tupla: {t1}') # Imprimindo a tupla no terminal
+# print(f'\nfim do programa') # Informando ao usuário que o programa terminou
